@@ -13,5 +13,6 @@ export class SearchBarComponent {
 
   emitSearchText(): void {
     this.OnSearchButtonClick.emit(this.searchText);
+    console.log(this.searchText);
   }
 }

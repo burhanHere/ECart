@@ -1,8 +1,8 @@
-<div [ngClass]="{'MainDiv':true}">
+<div [ngClass]="{'MainDiv':true}" (click)="this.emitproductData()">
     <div [ngClass]="{'imageContainerDiv':true}">
         <img src="{{this.product.imageURL}}" alt="{{this.product.name}}">
         <p *ngIf="this.product.discountPrice" [ngClass]="{'priceP':true, 'priceDiscountedP':true}">
-            ${{this.product.price}}</p>
+            ${{this.product.discountPrice}}</p>
         <p
             [ngClass]="{'priceP':true,'priceOrignalP':true, 'priceOrignalCrossedP':this.product.discountPrice?true:false}">
             ${{this.product.price}}</p>

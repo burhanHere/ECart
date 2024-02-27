@@ -1,0 +1,49 @@
+.mainDiv {
+    height: 100vh;
+    width: 40%;
+    background-color: rgb(184, 184, 184);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: large;
+}
+
+.imageContainerDivImg {
+    /* background-color: black; */
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: hidden;
+}
+
+.ProductDataDiv {
+    /* border: 1px solid green; */
+    width: fit-content;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 0.9pc;
+    text-align: left;
+}
+
+.brandGenderCategory {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+}
+
+.price {
+    background-color: black;
+    width: fit-content;
+    font-size: x-large;
+    color: white;
+}
+
+.priceOrignalCrossedP {
+    text-decoration: line-through;
+    color: gray;
+}

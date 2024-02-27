@@ -11,4 +11,8 @@ export class ProductCardComponent {
   product: Product = {} as Product;
   @Output()
   onProductCardClick: EventEmitter<Product> = new EventEmitter<Product>();
+
+  emitproductData(): void {
+    this.onProductCardClick.emit(this.product);
+  }
 }

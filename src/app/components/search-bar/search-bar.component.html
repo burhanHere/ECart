@@ -1,4 +1,5 @@
 <div [ngClass]="{'MainDiv':true}">
-    <input type="search" name="SearchInput" id="SearchInput" placeholder="Search...">
-    <input type="submit" name="searchButtonInput" id="searchButtonInput" value="" (click)="this.emitSearchText()">
+    <input type="text" name="SearchInput" id="SearchInput" placeholder="Search..." #searchInput>
+    <input type="submit" name="searchButtonInput" id="searchButtonInput" value=""
+        (click)="(this.searchText=searchInput.value) &&(this.emitSearchText())">
 </div>

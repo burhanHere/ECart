@@ -1,10 +1,54 @@
-<div [ngClass]="{'mainDiv':true}" [ngStyle]="{'display':(this.showProductDetails?'block':'None')}">
+<div [ngClass]="{'mainDiv':true}" [ngStyle]="{'display':(this.showProductDetails?'block':'None') }">
     <div [ngClass]="{'displayAreaDiv':true}">
         <img src="../../../assets/close_FILL0_wght400_GRAD0_opsz24.svg" alt="close" [ngClass]="{'closeButtonImg':true}"
             height="100%" (click)="this.closeProductDetails()">
         <div [ngClass]="{'detailsAreaDiv':true}">
-            <p>Brand Name: </p>
-        </div>
 
+            <div [ngClass]="{'imageContainerDiv':true}">
+                <img src={{this.productsDetailsToDisplay.imageURL}} alt="{{this.productsDetailsToDisplay.name}}"
+                    width="90%" [ngClass]="{'imageContainerDivImg':true}">
+            </div>
+            <div [ngClass]="{'ProductDataDiv':true}">
+                <p style="font-weight: bold;">{{this.productsDetailsToDisplay.name}}</p>
+                <div style="display: flex; width: fit-content;">
+                    <p [ngClass]="{'brandGenderCategory':true}">{{this.productsDetailsToDisplay.gender}}</p>
+                    <p [ngClass]="{'brandGenderCategory':true}">{{this.productsDetailsToDisplay.category}}</p>
+                    <p [ngClass]="{'brandGenderCategory':true}">{{this.productsDetailsToDisplay.brand}}</p>
+                </div>
+                <div>
+                    <span [ngClass]="{'price':true}">Price: </span>
+                    <span
+                        [ngClass]="{'priceOrignalCrossedP':this.productsDetailsToDisplay.discountPrice?true:false,'price':true}">
+                        ${{this.productsDetailsToDisplay.price}}</span>
+                    <span *ngIf="this.productsDetailsToDisplay.discountPrice" [ngClass]="{'price':true}">
+                        ${{this.productsDetailsToDisplay.discountPrice}}</span>
+                </div>
+                <p>Available Sizes</p>
+                <hr style="color: rgb(102, 91, 91);">
+                <div style="display: flex; align-items: center;justify-content: left;">
+                    <p style="background-color:rgb(102, 91, 91);color: white;width:1.7rem; text-align: center;margin-left: 1%;font-size: 1.5rem;"
+                        *ngFor="let i of this.productsDetailsToDisplay.size">{{i}}</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <!-- id: 33,
+    name: 'SK80-Low',
+    description:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    brand: 'Vans',
+    gender: 'MEN',
+    category: 'CASUAL',
+    size: [6, 7, 8, 9],
+    color: ['White', 'Blue', 'Black', 'Red'],
+    price: 60,
+    discountPrice: 25,
+    is_in_inventory: true,
+    items_left: 3,
+    imageURL: ,
+    slug: 'sk80-low', -->
