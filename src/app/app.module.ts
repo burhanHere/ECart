@@ -19,6 +19,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { FilterComponent } from './components/filter/filter.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     FilterComponent,
     ProductDetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterLink, RouterLinkActive],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterLink,
+    RouterLinkActive,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

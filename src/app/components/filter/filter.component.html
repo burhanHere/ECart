@@ -1,11 +1,14 @@
 <div [ngClass]="{'MainDiv':true}">
     <p>Filters</p>
     <div [ngClass]="{'radioButtonDiv':true}">
-        <input type="radio" name="ProductFilter" id="ProductFilter1" value='All'>
-        <label for="ProductFilter1">All</label>
-        <input type="radio" name="ProductFilter" id="ProductFilter2" value="InStock">
-        <label for="ProductFilter2">In Stock</label>
-        <input type="radio" name="ProductFilter" id="ProductFilter3" value="OutOfStock">
-        <label for="ProductFilter3">Out Of Stock</label>
+        <input type="radio" name="ProductFilter" id="ProductFilter1" value='all'
+            (click)="(this.selectedFilter='all')&&this.emitSelectedFilter()">
+        <label for="ProductFilter1">All({{this.allProductsCount}})</label>
+        <input type="radio" name="ProductFilter" id="ProductFilter2" value="inStock"
+            (click)="(this.selectedFilter='inStock')&&this.emitSelectedFilter()">
+        <label for="ProductFilter2">In Stock({{this.inStockProductsCount}})</label>
+        <input type="radio" name="ProductFilter" id="ProductFilter3" value="outOfStock"
+            (click)="(this.selectedFilter='outOfStock')&&this.emitSelectedFilter()">
+        <label for="ProductFilter3">Out Of Stock({{this.outOfStockProductsCount}})</label>
     </div>
-</div>
+</div>`

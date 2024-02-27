@@ -16,4 +16,9 @@ export class FilterComponent {
   selectedFilter = 'all';
   @Output()
   OnFilterSelect: EventEmitter<string> = new EventEmitter<string>();
+
+  emitSelectedFilter(): void {
+    this.OnFilterSelect.emit(this.selectedFilter);
+    console.log(this.selectedFilter);
+  }
 }
