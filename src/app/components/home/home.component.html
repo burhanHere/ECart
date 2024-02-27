@@ -1,0 +1,21 @@
+<div [ngClass]="{'MainDiv':true}">
+
+    <!-- Burhan is a goodf boy -->
+    <app-search-bar
+        (onSearchTextChanged)="(this.searchText=$event.toString())&&this.updateProductToDisplay()"></app-search-bar>
+
+    <app-filter [allProductsCount]="this.allProductsCount" [inStockProductsCount]="this.inStockProductsCount"
+        [outOfStockProductsCount]="this.outOfStockProductsCount" [selectedFilter]="this.selectedFilter"
+        (onFilterChange)="(this.selectedFilter=$event.toString())&&this.updateProductToDisplay()"></app-filter>
+
+    <div [ngClass]="{'productContainer':true}" *ngIf="this.allProductsCount>0">
+        <app-product-card *ngFor="let i of this.productToDisplay" [product]="i"
+            (click)="(this.showProductDetails=true)&&(this.setSelectedProductForDetails($event))"></app-product-card>
+    </div>
+    <div [ngClass]="{'productContainer':true}" *ngIf="this.allProductsCount==0">
+        <p>No Products Found</p>
+    </div>
+    <app-product-details [productsDetailsToDisplay]="this.selectedProductForDetails"
+        [showProductDetails]="this.showProductDetails"
+        (onCloseButtonClick)="this.showProductDetails=$event"></app-product-details>
+</div>

@@ -1,0 +1,10 @@
+<div [ngClass]="{'mainDiv':true}" [ngStyle]="{'display':(this.showProductDetails?'block':'None')}">
+    <div [ngClass]="{'displayAreaDiv':true}">
+        <img src="../../../assets/close_FILL0_wght400_GRAD0_opsz24.svg" alt="close" [ngClass]="{'closeButtonImg':true}"
+            height="100%" (click)="this.closeProductDetails()">
+        <div [ngClass]="{'detailsAreaDiv':true}">
+            <p>Brand Name: </p>
+        </div>
+
+    </div>
+</div>
