@@ -1,6 +1,4 @@
 <div [ngClass]="{'MainDiv':true}">
-
-    <!-- Burhan is a goodf boy -->
     <app-search-bar
         (onSearchTextChanged)="(this.searchText=$event.toString())&&this.updateProductToDisplay()"></app-search-bar>
 
@@ -18,4 +16,5 @@
     <app-product-details [productsDetailsToDisplay]="this.selectedProductForDetails"
         [showProductDetails]="this.showProductDetails"
         (onCloseButtonClick)="this.showProductDetails=$event"></app-product-details>
+    <app-contact></app-contact>
 </div>
