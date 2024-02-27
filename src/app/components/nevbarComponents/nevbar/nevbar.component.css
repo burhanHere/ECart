@@ -1,0 +1,39 @@
+.MainDiv {
+    /* background-color: blue; */
+    color: rgb(102, 91, 91);
+    display: flex;
+    align-items: center;
+}
+
+.newBarButtonDiv {
+    /* background-color: blue; */
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+a {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: transparent;
+    border: 0px;
+    font-size: x-large;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: 0.3s;
+    color: chocolate;
+    scale: 1.1;
+}
+
+.active {
+    transition: 0.3s ease-in-out;
+    text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+.MainDiv {
+    /* background-color: red; */
+    width: 100%;
+    color: rgb(102, 91, 91);
+    display: flex;
+    justify-content: right;
+}
+
+a {
+    color: rgb(102, 91, 91);
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    text-decoration: none;
+
+}
+
+.helpA {
+    color: rgb(19, 167, 216)
+}

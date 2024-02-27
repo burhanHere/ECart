@@ -9,7 +9,11 @@ import { ServicesComponent } from './components/services/services.component';
 import { Error404Component } from './components/error404/error404.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'E-Cart' },
+  {
+    path: '',
+    component: HomeComponent,
+    title: 'E-Cart',
+  },
   { path: 'home', component: HomeComponent, title: 'E-Cart' },
   { path: 'products', component: ProductsComponent, title: 'E-Cart Products' },
   { path: 'sale', component: SaleComponent, title: 'E-Cart Sale' },

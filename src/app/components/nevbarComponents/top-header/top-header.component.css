@@ -1,0 +1,15 @@
+.MainDiv {
+    background-color: rgb(102, 91, 91);
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 0%;
+    margin-left: 0%;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
+.saleP {
+    font-size: 1.3rem;
+    color: white;
+}

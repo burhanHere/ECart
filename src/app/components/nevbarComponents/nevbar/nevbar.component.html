@@ -1,1 +1,7 @@
-<p>nevbar works!</p>
+<div [ngClass]="{'MainDiv':true}">
+    <img src="../../../../assets/ECart1.png" height="90%" alt="E-Cart icon">
+    <div [ngClass]="{'newBarButtonDiv':true}">
+        <a *ngFor="let i of this.newbarLinks" routerLink="{{i.linkAddress}}" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page">{{i.linkName}}</a>
+    </div>
+</div>

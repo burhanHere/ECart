@@ -18,6 +18,7 @@ import { SaleComponent } from './components/sale/sale.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     FilterComponent,
     ProductDetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RouterLink, RouterLinkActive],
   providers: [],
   bootstrap: [AppComponent],
 })
