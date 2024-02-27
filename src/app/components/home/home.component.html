@@ -4,7 +4,7 @@
 
     <app-filter [allProductsCount]="this.allProductsCount" [inStockProductsCount]="this.inStockProductsCount"
         [outOfStockProductsCount]="this.outOfStockProductsCount" [selectedFilter]="this.selectedFilter"
-        (onFilterChange)="(this.selectedFilter=$event.toString())&&this.updateProductToDisplay()"></app-filter>
+        (OnFilterSelect)="(this.selectedFilter=$event.toString())&&this.updateProductToDisplay()"></app-filter>
 
     <div [ngClass]="{'productContainer':true}" *ngIf="this.allProductsCount>0">
         <app-product-card *ngFor="let i of this.productToDisplay" [product]="i"

@@ -19,6 +19,5 @@ export class FilterComponent {
 
   emitSelectedFilter(): void {
     this.OnFilterSelect.emit(this.selectedFilter);
-    console.log(this.selectedFilter);
   }
 }
