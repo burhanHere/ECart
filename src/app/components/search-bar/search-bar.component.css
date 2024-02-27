@@ -1,0 +1,26 @@
+.MainDiv {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font-size: x-large;
+    height: 3rem;
+    border: 0px;
+    background-color: #e0dcdc;
+}
+
+#SearchInput {
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    width: 50%;
+}
+
+#searchButtonInput {
+    background-image: url(../../../assets/search_FILL0_wght400_GRAD0_opsz24.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3rem;
+}

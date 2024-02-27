@@ -1,1 +1,11 @@
-<p>filter works!</p>
+<div [ngClass]="{'MainDiv':true}">
+    <p>Filters</p>
+    <div [ngClass]="{'radioButtonDiv':true}">
+        <input type="radio" name="ProductFilter" id="ProductFilter1" value='All'>
+        <label for="ProductFilter1">All</label>
+        <input type="radio" name="ProductFilter" id="ProductFilter2" value="InStock">
+        <label for="ProductFilter2">In Stock</label>
+        <input type="radio" name="ProductFilter" id="ProductFilter3" value="OutOfStock">
+        <label for="ProductFilter3">Out Of Stock</label>
+    </div>
+</div>
