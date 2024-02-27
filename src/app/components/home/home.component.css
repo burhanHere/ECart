@@ -2,3 +2,13 @@
     /* background-color: pink; */
     width: 100%;
 }
+
+.productContainer {
+    /* background-color: pink; */
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

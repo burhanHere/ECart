@@ -1,1 +1,21 @@
-<p>product-card works!</p>
+<div [ngClass]="{'MainDiv':true}">
+    <div [ngClass]="{'imageContainerDiv':true}">
+        <img src="{{this.product.imageURL}}" alt="{{this.product.name}}">
+        <p *ngIf="this.product.discountPrice" [ngClass]="{'priceP':true, 'priceDiscountedP':true}">
+            ${{this.product.price}}</p>
+        <p
+            [ngClass]="{'priceP':true,'priceOrignalP':true, 'priceOrignalCrossedP':this.product.discountPrice?true:false}">
+            ${{this.product.price}}</p>
+    </div>
+    <div [ngClass]="{'ProductDataDiv':true}">
+        <p style="font-weight: bold;">{{this.product.name}}</p>
+        <div style="display: flex;">
+            <p [ngClass]="{'brandGenderCategory':true}">{{this.product.gender}}</p>
+            <p [ngClass]="{'brandGenderCategory':true}">{{this.product.category}}</p>
+            <p [ngClass]="{'brandGenderCategory':true}">{{this.product.brand}}</p>
+        </div>
+        <p style=" color: rgb(102, 91, 91);">Color: {{this.product.color}}</p>
+        <p [ngStyle]="{'color': this.product.is_in_inventory?'green':'red','font-weight':'bold'}">
+            {{this.product.is_in_inventory?"Available In Stock":"Not Available In Stock"}}</p>
+    </div>
+</div>
