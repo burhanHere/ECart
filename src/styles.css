@@ -11,3 +11,28 @@
     padding-left: 0%;
 
 }
+
+/* Track */
+::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+    background-color: #000;
+}

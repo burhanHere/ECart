@@ -68,3 +68,28 @@
     background-color: white;
     color: black;
 }
+
+/* Track */
+::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #686363;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #888;
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+    background: #555;
+}
