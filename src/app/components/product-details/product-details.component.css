@@ -1,5 +1,7 @@
 .mainDiv {
     width: 40%;
+    height: 100vh;
+    overflow: scroll;
     background-color: rgb(184, 184, 184);
     display: grid;
     align-items: center;
@@ -20,9 +22,9 @@
 
 .ProductDataDiv {
     /* border: 1px solid green; */
-    width: fit-content;
     margin-top: 5%;
     margin-left: 5%;
+    margin-right: 5%;
     font-size: 0.9pc;
     text-align: left;
 }
@@ -46,4 +48,23 @@
 .priceOrignalCrossedP {
     text-decoration: line-through;
     color: gray;
+}
+
+.addToCardButton {
+    margin-top: 5%;
+    margin-left: 5%;
+    background-color: black;
+    color: white;
+    font-size: larger;
+    border: 0px;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.addToCardButton:hover {
+    transition: 0.3s;
+    background-color: white;
+    color: black;
 }

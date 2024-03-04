@@ -1,4 +1,4 @@
-<div [ngClass]="{'mainDiv':true}" [ngStyle]="{'display':(this.showProductDetails?'block':'None') }">
+<div [ngClass]="{'mainDiv':true}" [ngStyle]="{'display':(this.showProductDetails?'block':'None')}">
     <div [ngClass]="{'displayAreaDiv':true}">
         <img src="../../../assets/close_FILL0_wght400_GRAD0_opsz24.svg" alt="close" [ngClass]="{'closeButtonImg':true}"
             height="100%" (click)="this.closeProductDetails()">
@@ -24,11 +24,27 @@
                         ${{this.productsDetailsToDisplay.discountPrice}}</span>
                 </div>
                 <p>Available Sizes</p>
-                <hr style="color: rgb(102, 91, 91);">
-                <div style="display: flex; align-items: center;justify-content: left;">
-                    <p style="background-color:rgb(102, 91, 91);color: white;width:1.7rem; text-align: center;margin-left: 1%;padding-right: 1%;padding-right: 1%;font-size: 1.5rem;"
+                <hr style="width: 100%;">
+                <div style="display: flex; align-items: center;justify-content: left; flex-wrap: wrap;">
+                    <p style="background-color:rgb(102, 91, 91);color: white;width:1.7rem; text-align: center;margin-top: 1%;margin-right: 1%;margin-left: 1%;padding-left: 1%;padding-right: 1%;font-size: 1.5rem;"
                         *ngFor="let i of this.productsDetailsToDisplay.size">{{i}}</p>
                 </div>
+                <p>Available Colors</p>
+                <hr style="width: 100%;">
+                <div style="display: flex; align-items: center;justify-content: left;flex-wrap: wrap;">
+                    <p *ngFor="let i of this.productsDetailsToDisplay.color" [ngStyle]="{'background-color':i}"
+                        style="width:1.7rem;height:1.7rem;border-radius: 7rem; margin-top: 1%;margin-right: 1%;margin-left: 1%;">
+
+                    </p>
+                </div>
+                <p>Description</p>
+                <hr style="width: 100%;">
+                <div>
+                    <p>{{this.productsDetailsToDisplay.description}}</p>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button [ngClass]="{'addToCardButton':true}">Add To Card</button>
             </div>
         </div>
     </div>
