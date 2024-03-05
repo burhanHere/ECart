@@ -5,7 +5,7 @@
         <div [ngClass]="{'detailsAreaDiv':true}">
 
             <div [ngClass]="{'imageContainerDiv':true}">
-                <img src={{this.productsDetailsToDisplay.imageURL}} alt="{{this.productsDetailsToDisplay.name}}"
+                <img [src]="this.productsDetailsToDisplay.imageURL" [alt]="this.productsDetailsToDisplay.name"
                     width="90%" [ngClass]="{'imageContainerDivImg':true}">
             </div>
             <div [ngClass]="{'ProductDataDiv':true}">
