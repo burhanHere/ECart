@@ -20,6 +20,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule, NgModel } from '@angular/forms';
+import { FeacheredBrandCardComponent } from './components/feachered-brand-card/feachered-brand-card.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FormsModule, NgModel } from '@angular/forms';
     ProductCardComponent,
     FilterComponent,
     ProductDetailsComponent,
+    FeacheredBrandCardComponent,
   ],
   imports: [
     BrowserModule,

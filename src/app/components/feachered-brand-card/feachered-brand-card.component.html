@@ -1,0 +1,9 @@
+<div [ngClass]="{'mainDiv':true}">
+    <ng-content select="#1"></ng-content>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, saepe laudantium velit ab dolor dolore
+        reprehenderit aspernatur pariatur repudiandae, voluptate quis quae laboriosam veritatis a odio, recusandae odit!
+        Eveniet, assumenda?</p>
+    <ng-content select="#2"></ng-content>
+    <ng-content
+        select="#3"></ng-content><!-- if there will be not element with the respected id then there will be no error and nothing will be displayed in it's place -->
+</div>
