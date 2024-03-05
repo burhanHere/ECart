@@ -6,9 +6,9 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right: 0;
+    position: fixed;
     top: 0;
+    right: 0;
     font-size: large;
     padding-bottom: 5%;
 }
