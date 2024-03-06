@@ -6,7 +6,7 @@
 
             <div [ngClass]="{'imageContainerDiv':true}">
                 <img [src]="this.productsDetailsToDisplay.imageURL" [alt]="this.productsDetailsToDisplay.name"
-                    width="90%" [ngClass]="{'imageContainerDivImg':true}">
+                    [ngClass]="{'imageContainerDivImg':true}">
             </div>
             <div [ngClass]="{'ProductDataDiv':true}">
                 <p style="font-weight: bold;">{{this.productsDetailsToDisplay.name}}</p>
