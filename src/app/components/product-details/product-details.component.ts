@@ -11,6 +11,8 @@ export class ProductDetailsComponent {
   showProductDetails?: boolean;
   @Input()
   productsDetailsToDisplay: Product = {} as Product;
+  @Input()
+  currencyType: string = '';
   @Output()
   onCloseButtonClick: EventEmitter<boolean> = new EventEmitter<boolean>();
 

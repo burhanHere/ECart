@@ -599,6 +599,8 @@ export class HomeComponent {
       slug: 'michael-feburary-sk8-hi',
     },
   ];
+  //currency type is specified in this variable
+  currencyType: string = 'PKR';
   // updating the product count according to each filter
   allProductsCount: number = this.allProducts.length;
   inStockProductsCount: number = this.allProducts.filter(

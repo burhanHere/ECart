@@ -9,6 +9,8 @@ import { Product } from 'src/app/interfaces/product';
 export class ProductCardComponent {
   @Input()
   product: Product = {} as Product;
+  @Input()
+  currencyType: string = '';
   @Output()
   onProductCardClick: EventEmitter<Product> = new EventEmitter<Product>();
 

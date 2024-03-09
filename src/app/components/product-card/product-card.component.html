@@ -2,10 +2,10 @@
     <div [ngClass]="{'imageContainerDiv':true}">
         <img src="{{this.product.imageURL}}" alt="{{this.product.name}}">
         <p *ngIf="this.product.discountPrice" [ngClass]="{'priceP':true, 'priceDiscountedP':true}">
-            {{this.product.discountPrice | currency}}</p>
+            {{this.product.discountPrice | currency:this.currencyType}}</p>
         <p
             [ngClass]="{'priceP':true,'priceOrignalP':true, 'priceOrignalCrossedP':this.product.discountPrice?true:false}">
-            {{this.product.price | currency}}</p>
+            {{this.product.price | currency:this.currencyType}}</p>
     </div>
     <div [ngClass]="{'ProductDataDiv':true}">
         <p style="font-weight: bold;">{{this.product.name}}</p>
