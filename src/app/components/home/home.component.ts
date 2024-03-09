@@ -600,7 +600,7 @@ export class HomeComponent {
     },
   ];
   //currency type is specified in this variable
-  currencyType: string = 'PKR';
+  currencyType: string = 'USD';
   // updating the product count according to each filter
   allProductsCount: number = this.allProducts.length;
   inStockProductsCount: number = this.allProducts.filter(

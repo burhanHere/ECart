@@ -16,7 +16,9 @@ export class ProductDetailsComponent {
   @Output()
   onCloseButtonClick: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  selectedCurrency: string = 'PKR';
+  selectedCurrency: string = 'USD';
+
+  availableCurrency: Array<String> = ['USD', 'JPY', 'GBP', 'INR'];
 
   closeProductDetails(): void {
     this.onCloseButtonClick.emit(false);
