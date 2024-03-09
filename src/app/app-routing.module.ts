@@ -5,7 +5,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { SaleComponent } from './components/sale/sale.component';
 import { NewArrivalComponent } from './components/new-arrival/new-arrival.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ServicesComponent } from './components/services/services.component';
+import { OurServicesComponent } from './components/our-services/our-services.component';
 import { Error404Component } from './components/error404/error404.component';
 
 const routes: Routes = [
@@ -23,7 +23,11 @@ const routes: Routes = [
     title: 'E-Cart New Arrival',
   },
   { path: 'contact', component: ContactComponent, title: 'E-Cart Contact' },
-  { path: 'services', component: ServicesComponent, title: 'E-Cart Services' },
+  {
+    path: 'our-services',
+    component: OurServicesComponent,
+    title: 'E-Cart Our-Services',
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: Error404Component, title: 'E-Cart Error404' },
 ];

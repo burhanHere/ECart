@@ -12,6 +12,6 @@ export class NevbarComponent {
     { linkName: 'Sale', linkAddress: '/sale' },
     { linkName: 'New Arrival', linkAddress: '/new-arrival' },
     { linkName: 'Contact', linkAddress: '/contact' },
-    { linkName: 'Services', linkAddress: '/services' },
+    { linkName: 'Our Services', linkAddress: '/our-services' },
   ];
 }

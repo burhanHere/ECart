@@ -12,7 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { Error404Component } from './components/error404/error404.component';
-import { ServicesComponent } from './components/services/services.component';
+import { OurServicesComponent } from './components/our-services/our-services.component';
 import { NewArrivalComponent } from './components/new-arrival/new-arrival.component';
 import { SaleComponent } from './components/sale/sale.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
@@ -34,7 +34,7 @@ import { ConvertToCurrencyPipe } from './pipes/ConvertToCurrency/convert-to-curr
     ContactComponent,
     SearchBarComponent,
     Error404Component,
-    ServicesComponent,
+    OurServicesComponent,
     NewArrivalComponent,
     SaleComponent,
     ProductCardComponent,
@@ -42,6 +42,7 @@ import { ConvertToCurrencyPipe } from './pipes/ConvertToCurrency/convert-to-curr
     ProductDetailsComponent,
     FeacheredBrandCardComponent,
     ConvertToCurrencyPipe,
+    OurServicesComponent,
   ],
   imports: [
     BrowserModule,
