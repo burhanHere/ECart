@@ -12,12 +12,14 @@ export class ProductDetailsComponent {
   @Input()
   productsDetailsToDisplay: Product = {} as Product;
   @Input()
-  currencyType: string = '';
+  currentCurrency: string = '';
   @Output()
   onCloseButtonClick: EventEmitter<boolean> = new EventEmitter<boolean>();
 
+  selectedCurrency: string = 'PKR';
+
   closeProductDetails(): void {
     this.onCloseButtonClick.emit(false);
-    console.log(this.productsDetailsToDisplay);
+    // console.log(this.productsDetailsToDisplay);
   }
 }

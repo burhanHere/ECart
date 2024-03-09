@@ -7,7 +7,7 @@
         (OnFilterSelect)="(this.selectedFilter=$event.toString())&&this.updateProductToDisplay()"></app-filter>
 
     <div [ngClass]="{'productContainer':true}" *ngIf="this.allProductsCount>0">
-        <app-product-card *ngFor="let i of this.productToDisplay" [product]="i" [currencyType]="this.currencyType"
+        <app-product-card *ngFor="let i of this.productToDisplay" [product]="i" [currentCurrency]="this.currencyType"
             (onProductCardClick)="
             (this.showProductDetails=true)&&(this.setSelectedProductForDetails($event))"></app-product-card>
     </div>
@@ -16,7 +16,7 @@
     </div>
 
     <app-product-details [productsDetailsToDisplay]="this.selectedProductForDetails"
-        [showProductDetails]="this.showProductDetails" [currencyType]="this.currencyType"
+        [showProductDetails]="this.showProductDetails" [currentCurrency]="this.currencyType"
         (onCloseButtonClick)="this.showProductDetails=$event"></app-product-details>
 
     <div [ngClass]="{'newArrivalDiv':true}">

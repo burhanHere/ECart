@@ -53,6 +53,16 @@
     color: white;
 }
 
+.priceSelect {
+    margin-left: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: black;
+    width: fit-content;
+    font-size: large;
+    color: white;
+}
+
 .priceOrignalCrossedP {
     text-decoration: line-through;
     color: gray;

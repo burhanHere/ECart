@@ -21,6 +21,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule, NgModel } from '@angular/forms';
 import { FeacheredBrandCardComponent } from './components/feachered-brand-card/feachered-brand-card.component';
+import { ConvertToCurrencyPipe } from './pipes/ConvertToCurrency/convert-to-currency.pipe';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FeacheredBrandCardComponent } from './components/feachered-brand-card/f
     FilterComponent,
     ProductDetailsComponent,
     FeacheredBrandCardComponent,
+    ConvertToCurrencyPipe,
   ],
   imports: [
     BrowserModule,

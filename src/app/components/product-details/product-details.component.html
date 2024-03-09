@@ -19,9 +19,18 @@
                     <span [ngClass]="{'price':true}">Price: </span>
                     <span
                         [ngClass]="{'priceOrignalCrossedP':this.productsDetailsToDisplay.discountPrice?true:false,'price':true}">
-                        {{this.productsDetailsToDisplay.price | currency:this.currencyType}}</span>
+                        {{this.productsDetailsToDisplay.price | currency:this.selectedCurrency}}</span>
                     <span *ngIf="this.productsDetailsToDisplay.discountPrice" [ngClass]="{'price':true}">
-                        {{this.productsDetailsToDisplay.discountPrice | currency:this.currencyType}}</span>
+                        {{(this.productsDetailsToDisplay.discountPrice | convertToCurrency:this.currentCurrency:this.selectedCurrency).toString()| currency:this.selectedCurrency}}</span>
+                    <span>
+                        <select name="CurrencyOption" id="CurrencyOption" [ngClass]="{'priceSelect':true}"
+                            [(ngModel)]="this.selectedCurrency">
+                            <option value="PKR">PKR</option>
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="INR">INR</option>
+                        </select>
+                    </span>
                 </div>
                 <p>Available Sizes</p>
                 <hr style="width: 100%;">

@@ -10,7 +10,7 @@ export class ProductCardComponent {
   @Input()
   product: Product = {} as Product;
   @Input()
-  currencyType: string = '';
+  currentCurrency: string = '';
   @Output()
   onProductCardClick: EventEmitter<Product> = new EventEmitter<Product>();
 
