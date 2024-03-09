@@ -19,9 +19,9 @@
                     <span [ngClass]="{'price':true}">Price: </span>
                     <span
                         [ngClass]="{'priceOrignalCrossedP':this.productsDetailsToDisplay.discountPrice?true:false,'price':true}">
-                        ${{this.productsDetailsToDisplay.price}}</span>
+                        {{this.productsDetailsToDisplay.price | currency}}</span>
                     <span *ngIf="this.productsDetailsToDisplay.discountPrice" [ngClass]="{'price':true}">
-                        ${{this.productsDetailsToDisplay.discountPrice}}</span>
+                        {{this.productsDetailsToDisplay.discountPrice | currency}}</span>
                 </div>
                 <p>Available Sizes</p>
                 <hr style="width: 100%;">
