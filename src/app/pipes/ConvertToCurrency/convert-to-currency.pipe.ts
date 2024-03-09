@@ -4,10 +4,12 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'convertToCurrency',
 })
 export class ConvertToCurrencyPipe implements PipeTransform {
-  transform(value: Number, ...args: string[]): Number {
-    if (args.length > 0) {
-      const [from, to] = args;
-    }
+  transform(value: number, ...args: any[]): number {
+    const [from, to] = args;
+    console.log(value);
+    console.log(from);
+    console.log(to);
+    // code to make api call and convert to the respected currency then return the value
     return value;
   }
 }
