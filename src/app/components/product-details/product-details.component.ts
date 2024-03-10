@@ -17,19 +17,25 @@ export class ProductDetailsComponent {
   onCloseButtonClick: EventEmitter<boolean>;
 
   selectedCurrency: string;
+  tempSelectedCurrency: string;
 
-  availableCurrency!: Array<String>;
+  availableCurrency: Array<String>;
 
   constructor() {
     this.productsDetailsToDisplay = {} as Product;
     this.currentCurrency = '';
     this.onCloseButtonClick = new EventEmitter<boolean>();
     this.selectedCurrency = 'USD';
+    this.tempSelectedCurrency = 'USD';
     this.availableCurrency = ['USD', 'JPY', 'GBP', 'INR'];
+  }
+
+  updateCurrency(value: string) {
+    this.currentCurrency = this.selectedCurrency;
+    this.selectedCurrency = value;
   }
 
   closeProductDetails(): void {
     this.onCloseButtonClick.emit(false);
-    // console.log(this.productsDetailsToDisplay);
   }
 }

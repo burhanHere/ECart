@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ProductsComponent } from './components/products/products.component';
 import { TopHeaderComponent } from './components/nevbarComponents/top-header/top-header.component';
@@ -52,6 +52,7 @@ import { CurrencyRatesService } from './services/CurrencyRates/currency-rates.se
     RouterLink,
     RouterLinkActive,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [ProductDataService, CurrencyRatesService],
   bootstrap: [AppComponent],

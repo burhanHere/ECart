@@ -23,9 +23,8 @@ export class HomeComponent {
   selectedProductForDetails: Product;
 
   constructor(productDataService: ProductDataService) {
-    this.currencyType = 'USD';
     this.allProducts = productDataService.getProductDataList();
-    console.log(this.allProducts);
+    this.currencyType = 'USD';
     this.allProductsCount = this.allProducts.length;
     this.inStockProductsCount = this.allProducts.filter(
       (p) => p.is_in_inventory === true
@@ -33,7 +32,6 @@ export class HomeComponent {
     this.outOfStockProductsCount = this.allProducts.filter(
       (p) => p.is_in_inventory === false
     ).length;
-
     this.selectedFilter = 'all';
     this.searchText = 'NULL_NODATA';
     this.productToDisplay = this.allProducts;

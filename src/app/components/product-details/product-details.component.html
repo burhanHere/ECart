@@ -19,13 +19,14 @@
                     <span [ngClass]="{'price':true}">Price: </span>
                     <span
                         [ngClass]="{'priceOrignalCrossedP':this.productsDetailsToDisplay.discountPrice?true:false,'price':true}">
-                        {{(this.productsDetailsToDisplay.price | convertToCurrency:this.currentCurrency:this.selectedCurrency) | currency:this.selectedCurrency}}</span>
+                        {{(this.productsDetailsToDisplay.price|convertToCurrency:this.currentCurrency:this.selectedCurrency) | currency:this.selectedCurrency}}</span>
                     <span *ngIf="this.productsDetailsToDisplay.discountPrice" [ngClass]="{'price':true}">
                         {{this.productsDetailsToDisplay.discountPrice | currency:this.selectedCurrency}}</span>
                     <span>
-                        <select name="CurrencyOption" id="CurrencyOption" [ngClass]="{'priceSelect':true}"
-                            [(ngModel)]="this.selectedCurrency">
-                            <option *ngFor="let i of this.availableCurrency" [value]="i">{{i}}</option>
+                        <select name="CurrencyOption" id="CurrencyOption" [ngClass]="{'priceSelect': true}"
+                            [(ngModel)]="this.tempSelectedCurrency"
+                            (ngModelChange)="this.updateCurrency(this.tempSelectedCurrency)">
+                            <option *ngFor="let i of availableCurrency" [value]="i">{{i}}</option>
                         </select>
                     </span>
                 </div>
