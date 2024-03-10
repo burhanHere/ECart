@@ -10,15 +10,23 @@ export class ProductDetailsComponent {
   @Input()
   showProductDetails?: boolean;
   @Input()
-  productsDetailsToDisplay: Product = {} as Product;
+  productsDetailsToDisplay: Product;
   @Input()
-  currentCurrency: string = '';
+  currentCurrency!: string;
   @Output()
-  onCloseButtonClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+  onCloseButtonClick: EventEmitter<boolean>;
 
-  selectedCurrency: string = 'USD';
+  selectedCurrency: string;
 
-  availableCurrency: Array<String> = ['USD', 'JPY', 'GBP', 'INR'];
+  availableCurrency!: Array<String>;
+
+  constructor() {
+    this.productsDetailsToDisplay = {} as Product;
+    this.currentCurrency = '';
+    this.onCloseButtonClick = new EventEmitter<boolean>();
+    this.selectedCurrency = 'USD';
+    this.availableCurrency = ['USD', 'JPY', 'GBP', 'INR'];
+  }
 
   closeProductDetails(): void {
     this.onCloseButtonClick.emit(false);

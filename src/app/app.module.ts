@@ -22,6 +22,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule, NgModel } from '@angular/forms';
 import { FeacheredBrandCardComponent } from './components/feachered-brand-card/feachered-brand-card.component';
 import { ConvertToCurrencyPipe } from './pipes/ConvertToCurrency/convert-to-currency.pipe';
+import { ProductDataService } from './services/ProductData/product-data.service';
+import { CurrencyRatesService } from './services/CurrencyRates/currency-rates.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,7 @@ import { ConvertToCurrencyPipe } from './pipes/ConvertToCurrency/convert-to-curr
     RouterLinkActive,
     FormsModule,
   ],
-  providers: [],
+  providers: [ProductDataService, CurrencyRatesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

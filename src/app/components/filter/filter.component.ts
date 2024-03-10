@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { every } from 'rxjs';
 
 @Component({
   selector: 'app-filter',
@@ -13,9 +14,14 @@ export class FilterComponent {
   @Input()
   outOfStockProductsCount!: number;
   @Input()
-  selectedFilter = 'all';
+  selectedFilter!: string;
   @Output()
-  OnFilterSelect: EventEmitter<string> = new EventEmitter<string>();
+  OnFilterSelect!: EventEmitter<string>;
+
+  constructor() {
+    this.selectedFilter = 'all';
+    this.OnFilterSelect = new EventEmitter<string>();
+  }
 
   emitSelectedFilter(): void {
     this.OnFilterSelect.emit(this.selectedFilter);

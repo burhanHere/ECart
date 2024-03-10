@@ -8,11 +8,17 @@ import { Product } from 'src/app/interfaces/product';
 })
 export class ProductCardComponent {
   @Input()
-  product: Product = {} as Product;
+  product: Product;
   @Input()
-  currentCurrency: string = '';
+  currentCurrency: string;
   @Output()
-  onProductCardClick: EventEmitter<Product> = new EventEmitter<Product>();
+  onProductCardClick: EventEmitter<Product>;
+
+  constructor() {
+    this.product = {} as Product;
+    this.currentCurrency = '';
+    this.onProductCardClick = new EventEmitter<Product>();
+  }
 
   emitproductData(): void {
     this.onProductCardClick.emit(this.product);

@@ -6,10 +6,15 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search-bar.component.css'],
 })
 export class SearchBarComponent {
-  searchText: string = 'NULL_NODATA';
+  searchText!: string;
 
   @Output()
-  OnSearchButtonClick: EventEmitter<string> = new EventEmitter<string>();
+  OnSearchButtonClick: EventEmitter<string>;
+
+  constructor() {
+    this.searchText == 'NULL_NODATA';
+    this.OnSearchButtonClick = new EventEmitter<string>();
+  }
 
   emitSearchText(): void {
     this.OnSearchButtonClick.emit(this.searchText);

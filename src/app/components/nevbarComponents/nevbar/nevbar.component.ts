@@ -6,12 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./nevbar.component.css'],
 })
 export class NevbarComponent {
-  newbarLinks = [
-    { linkName: 'Home', linkAddress: '/home' },
-    { linkName: 'Products', linkAddress: '/products' },
-    { linkName: 'Sale', linkAddress: '/sale' },
-    { linkName: 'New Arrival', linkAddress: '/new-arrival' },
-    { linkName: 'Contact', linkAddress: '/contact' },
-    { linkName: 'Our Services', linkAddress: '/our-services' },
-  ];
+  newbarLinks!: Array<object>;
+
+  constructor() {
+    this.newbarLinks = [
+      { linkName: 'Home', linkAddress: '/home' },
+      { linkName: 'Products', linkAddress: '/products' },
+      { linkName: 'Sale', linkAddress: '/sale' },
+      { linkName: 'New Arrival', linkAddress: '/new-arrival' },
+      { linkName: 'Contact', linkAddress: '/contact' },
+      { linkName: 'Our Services', linkAddress: '/our-services' },
+    ];
+  }
 }
