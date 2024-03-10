@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NevbarLink } from 'src/app/interfaces/nevbar-link';
 
 @Component({
   selector: 'app-nevbar',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nevbar.component.css'],
 })
 export class NevbarComponent {
-  newbarLinks!: Array<object>;
+  newbarLinks!: Array<NevbarLink>;
 
   constructor() {
     this.newbarLinks = [
