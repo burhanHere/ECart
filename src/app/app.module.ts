@@ -19,9 +19,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { FilterComponent } from './components/filter/filter.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { FeaturedBrandCardComponent } from './components/featured-brand-card/featured-brand-card.component';
-import { ConvertToCurrencyPipe } from './pipes/ConvertToCurrency/convert-to-currency.pipe';
 import { ProductDataService } from './services/ProductData/product-data.service';
 import { CurrencyRatesService } from './services/CurrencyRates/currency-rates.service';
 
@@ -43,8 +42,6 @@ import { CurrencyRatesService } from './services/CurrencyRates/currency-rates.se
     FilterComponent,
     ProductDetailsComponent,
     FeaturedBrandCardComponent,
-    ConvertToCurrencyPipe,
-    OurServicesComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,9 +19,9 @@
                     <span [ngClass]="{'price':true}">Price: </span>
                     <span
                         [ngClass]="{'priceOrignalCrossedP':this.productsDetailsToDisplay.discountPrice?true:false,'price':true}">
-                        {{(this.productsDetailsToDisplay.price|convertToCurrency:this.currentCurrency:this.selectedCurrency) | currency:this.selectedCurrency}}</span>
+                        {{this.productsDetailsToDisplay_Price| currency:this.selectedCurrency}}</span>
                     <span *ngIf="this.productsDetailsToDisplay.discountPrice" [ngClass]="{'price':true}">
-                        {{this.productsDetailsToDisplay.discountPrice | currency:this.selectedCurrency}}</span>
+                        {{this.productsDetailsToDisplay_DiscountPrice | currency:this.selectedCurrency}}</span>
                     <span>
                         <select name="CurrencyOption" id="CurrencyOption" [ngClass]="{'priceSelect': true}"
                             [(ngModel)]="this.tempSelectedCurrency"
