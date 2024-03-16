@@ -83,6 +83,7 @@
                         rows="8" required></textarea><br>
 
                     <input type="submit" value="Submit" [disabled]="contactForm.invalid"
+                        (click)="contactForm.resetForm()"
                         [ngStyle]="{'text-decoration':contactForm.invalid?'line-through':'none','background-color':contactForm.invalid?'#635d5d':'#444','border':contactForm.invalid?'0px':'1px solid white'}">
                 </form>
             </section>
