@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -18,7 +19,7 @@ export class ContactComponent {
     this.message = '';
   }
 
-  postData(contactForm: any): void {
+  postData(contactForm: NgForm): void {
     console.log(contactForm);
     console.log('-------------------------');
     console.log(this.name);
@@ -26,5 +27,8 @@ export class ContactComponent {
     console.log(this.subject);
     console.log(this.message);
     //code here t send data to the backend or api
+
+    //reseting form
+    contactForm.resetForm();
   }
 }
